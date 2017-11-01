@@ -5,6 +5,8 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Table(name = "JPA_STUDENTS")
@@ -17,7 +19,9 @@ public class Student {
 	private String name;
 	private String email;
 	private String mobile;
-	private String address;
+	@JoinColumn(name = "ADDRESS_ID")
+	@ManyToOne
+	private Address address;
 	private Date birth;
 
 	public Integer getId() {
@@ -52,14 +56,6 @@ public class Student {
 		this.mobile = mobile;
 	}
 
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
 	public Date getBirth() {
 		return birth;
 	}
@@ -68,10 +64,18 @@ public class Student {
 		this.birth = birth;
 	}
 
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
 	@Override
 	public String toString() {
-		return "Student [id=" + id + ", name=" + name + ", email=" + email + ", mobile=" + mobile + ", address="
-				+ address + ", birth=" + birth + "]";
+		return "Student [id=" + id + ", name=" + name + ", email=" + email + ", mobile=" + mobile + ", birth=" + birth
+				+ "]";
 	}
 
 }
