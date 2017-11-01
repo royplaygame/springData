@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -23,7 +24,8 @@ import com.hy.ly.po.Student;
  * 而不使用级联属性. 若需要使用级联属性, 则属性之间使用 _ 进行连接.
  */
 // @RepositoryDefinition(domainClass=Student.class,idClass=Integer.class)
-public interface StudentRepository extends JpaRepository<Student, Integer> {
+public interface StudentRepository
+		extends JpaRepository<Student, Integer>, JpaSpecificationExecutor<Student>, StudentDao {
 
 	Student getByName(String name);
 
