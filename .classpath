@@ -30,5 +30,10 @@
 	<classpathentry kind="lib" path="lib/spring-expression-4.3.3.RELEASE.jar"/>
 	<classpathentry kind="lib" path="lib/spring-jdbc-4.3.3.RELEASE.jar"/>
 	<classpathentry kind="lib" path="lib/spring-tx-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-orm-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-data-commons-1.6.2.RELEASE.jar" sourcepath="D:/tools/SSH/spring/spring-data/spring-data-commons-1.6.2.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="lib/spring-data-jpa-1.4.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
